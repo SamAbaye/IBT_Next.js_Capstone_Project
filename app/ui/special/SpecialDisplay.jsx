@@ -1,8 +1,15 @@
 import DishCard from  '../../menu/dish/DishCard';
 import "./SpecialDisplay.css";
+import fs from "fs/promises";
+import path from "path";
+
+async function getMenuData() {
+  const filePath = path.join(process.cwd(), "public", "menu.json");
+  const fileContents = await fs.readFile(filePath, "utf-8");
+  return JSON.parse(fileContents);
+}
 async function SpecialDisplay() {
-  const res = await fetch("http://localhost:3000/menu.json");
-  const data = await res.json();
+  const data = await getMenuData();
 
   const dishes = data.categories.flatMap((cat) =>
     cat.items.map((item) => ({

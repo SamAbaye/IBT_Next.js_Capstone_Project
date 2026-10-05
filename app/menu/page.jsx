@@ -1,12 +1,14 @@
 import CategoryBar from "./catagory/CategoryBar";
 export const revalidate = 3600;
 import { Suspense } from "react";
-// 
+import fs from "fs/promises";
+import path from "path";
 import DishCard from "./dish/DishCard";
 
 async function getMenuData() {
-  const res = await fetch("http://localhost:3000/menu.json");
-  return res.json();
+  const filePath = path.join(process.cwd(), "public", "menu.json");
+  const fileContents = await fs.readFile(filePath, "utf-8");
+  return JSON.parse(fileContents);
 }
 export default async function MenuPage({searchParams}) {
   const data = await getMenuData();
