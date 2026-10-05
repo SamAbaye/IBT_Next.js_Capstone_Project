@@ -1,0 +1,9 @@
+.special-menu {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+    max-width: 1280px;
+}

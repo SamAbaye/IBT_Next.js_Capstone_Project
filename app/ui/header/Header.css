@@ -1,0 +1,87 @@
+.menu-list a {
+    text-decoration: none;
+    color: #690404;
+    font-weight: bold;
+    padding: 8px 16px;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+
+}
+
+.menu-list a:hover {
+    color: #614bb7;
+    font-weight: bold;
+}
+
+.header {
+    display: flex;
+    min-width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #f4f3ec;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #5c0909;
+    font-weight: bold;
+    gap: 10px;
+}
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+.menu-list {
+    display: flex;
+    gap: 30px;
+}
+.cart-items {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 4rem;
+    width: 10rem;
+    align-items: center;
+    gap: 30px;
+}
+.count {
+    background-color: rgb(26, 102, 3);
+    color: white;
+    padding: 15px 10px;
+    height: 4rem;
+    width: 4.5rem;
+    border-radius: 5px;
+}
+
+.total-price {
+    color: rgb(17, 17, 17);
+    height: 4rem;
+    width: 4rem;
+    padding: 15px 10px;
+    border-radius: 5px;
+}
+.auth {
+    display: flex;
+    gap: 20px;
+}
+.auth a {
+    text-decoration: none;
+    color: #5c0909;
+    font-weight: bold;
+    cursor: pointer;
+}
+.auth a:hover {
+    color: #614bb7;
+    font-weight: bold;
+}
+.logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
